@@ -1,0 +1,18 @@
+# SOMNUS AI Agent dependencies
+boto3>=1.34.0
+psycopg2-binary>=2.9.9
+pgvector>=0.3.0
+streamlit>=1.32.0
+python-dotenv>=1.0.1
+pytest>=8.0.0
+pytest-mock>=3.12.0
+
+# Legacy hiring-agent dependencies (retained for compatibility)
+PyMuPDF==1.26.3
+ollama==0.5.1
+pydantic==2.11.7
+requests==2.32.4
+pymupdf4llm==0.0.27
+Jinja2==3.1.6
+google-generativeai==0.4.0
+black==25.9.0
