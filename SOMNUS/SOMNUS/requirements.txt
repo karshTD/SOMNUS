@@ -1,0 +1,16 @@
+# --- core (required) ---
+numpy>=1.26
+python-dotenv>=1.0.1
+
+# --- CockroachDB ---
+psycopg2-binary>=2.9.9
+
+# --- AWS (Bedrock + S3) ---
+boto3>=1.34.0
+
+# --- dashboard ---
+streamlit>=1.32.0
+pandas>=2.2.0
+
+# --- tests ---
+pytest>=8.0.0
