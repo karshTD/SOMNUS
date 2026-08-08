@@ -1,19 +1,4 @@
-"""CockroachDB schema. Real CRDB syntax -- not Postgres+pgvector.
 
-Three corrections over the naive version:
-
-  * NO ``CREATE EXTENSION vector``. CockroachDB has a *native* VECTOR type;
-    there is no extension to install and the statement errors out.
-  * NO ``USING hnsw (...)``. CockroachDB deliberately rejected HNSW (it builds
-    its graph in memory and resists sharding) in favour of C-SPANN/SPFresh.
-    The correct form is an inline ``VECTOR INDEX`` or ``CREATE VECTOR INDEX``.
-  * Row-level TTL on ``episodes``. Forgetting is a property of the substrate,
-    not application code. Episodes expire unless replay rescues them.
-
-Statements are applied one at a time so an unsupported optional feature
-(e.g. vector indexing on an older cluster) degrades to a warning rather than
-aborting the whole migration -- exact ``<=>`` search still works without an index.
-"""
 
 from __future__ import annotations
 
