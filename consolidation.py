@@ -1,26 +1,6 @@
 """NREM consolidation. The heart of the system.
 
-The naive version concatenated every episode into one Bedrock prompt and
-appended one new row per sleep cycle -- accumulation, not consolidation.
-Nothing merged, nothing sharpened, memory grew forever, and there was no
-interleaving, so the anti-forgetting claim had no mechanism behind it.
 
-This version implements the actual CLS prescription (McClelland, McNaughton &
-O'Reilly 1995):
-
-  1. PRIORITISED REPLAY  -- sample episodes by DA + surprise.
-  2. INTERLEAVED REPLAY  -- mix in generative samples drawn from EXISTING
-                            schemas. This is the anti-forgetting mechanism and
-                            the reason CLS evolved. Remove it and old knowledge
-                            is overwritten by whatever happened most recently.
-  3. MERGE-OR-SPAWN      -- update the nearest schema if close enough, else
-                            create a new one. Memory stops growing linearly.
-  4. METAPLASTICITY      -- alpha = alpha_base * 2^-stability (Fusi et al. 2005).
-                            Repeatedly-confirmed knowledge becomes near-frozen;
-                            an NA violation re-opens it.
-  5. TTL RESCUE          -- replayed episodes get their expiry extended.
-                            Unreplayed episodes are never touched and simply
-                            expire. We write NO forgetting code.
 """
 
 from __future__ import annotations
