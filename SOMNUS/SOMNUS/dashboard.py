@@ -7,7 +7,7 @@ Two structural fixes over the previous version:
     per rerun and never closed them, exhausting CockroachDB Serverless's
     connection limit within a couple of minutes of clicking. On stage.
   * Buttons send COMMANDS to the running agent instead of mutating a local
-    throwaway Simulator in a different process. The old "Inject Anomaly"
+    throwaway Simulator in a different process. The old "Inject Anomaly
     button silently did nothing.
 """
 
