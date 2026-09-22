@@ -1,7 +1,4 @@
-"""NREM consolidation. The heart of the system.
 
-
-"""
 
 from __future__ import annotations
 
