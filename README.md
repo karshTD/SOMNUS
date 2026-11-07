@@ -5,7 +5,7 @@ dynamics *are* database primitives.
 
 Forgetting is a TTL policy, not a cleanup job. Consolidation is a transaction.
 Introspection is MVCC time travel. Prediction errors are rows on a bus. The
-claim is not "we stored embeddings in CockroachDB" — it is that a distributed
+claim is not "we stored embeddings in CockroachDB" , it is that a distributed
 database has the right primitives to behave like nervous tissue.
 
 ---
