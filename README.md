@@ -15,6 +15,7 @@ database has the right primitives to behave like nervous tissue.
 The point of this repo is one number, and it is reproducible in 30 seconds with
 no credentials:
 
+
 ```bash
 pip install -r requirements.txt
 make bench-full
